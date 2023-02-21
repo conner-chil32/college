@@ -1,0 +1,215 @@
+Script started on 2023-02-20 18:10:25-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="30"]
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college[00m$ history -c
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college[00m$ cd csc60/
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60[00m$ mkdir lab3
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60[00m$ cd k[Klab
+[?2004lbash: cd: lab: No such file or directory
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60[00m$ cd lab3
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ pwd
+[?2004l/home/conner_c/college/csc60/lab3
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ mkdir aaa
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ cd aaa/
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ pwd
+[?2004l/home/conner_c/college/csc60/lab3/aaa
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cd ..
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ pwd
+[?2004l/home/conner_c/college/csc60/lab3
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ ls > file1
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ car [K[Kt file1
+[?2004laaa
+file1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ less file1
+[?2004l[?1049h[22;0;0t[?1h=aaa
+file1
+[7mfile1 (END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ file *
+[?2004laaa:   directory
+file1: ASCII text
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ wc file1
+[?2004l 2  2 10 file1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ wd[Kc *
+[?2004lwc: aaa: Is a directory
+      0       0       0 aaa
+      2       2      10 file1
+      2       2      10 total
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ grep file file1
+[?2004l[01;31m[Kfile[m[K1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ gri[Kep file file1
+[?2004l[01;31m[Kfile[m[K1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ cp file fo[Kile2
+[?2004lcp: cannot stat 'file': No such file or directory
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ cp file1 file2
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ c[Kls
+[?2004l[0m[01;34maaa[0m  file1  file2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ cd aaa/
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ pwd
+[?2004l/home/conner_c/college/csc60/lab3/aaa
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cp ../file1
+[?2004lcp: missing destination file operand after '../file1'
+Try 'cp --help' for more information.
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cp ../file1 .
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ ls
+[?2004lfile1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ mv file 1[K[K1 file2
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ ls
+[?2004lfile2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ mv /[K../foe[K[Kile1[K1 .
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cd ..
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ ls
+[?2004l[0m[01;34maaa[0m  file2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3[00m$ cd aaa
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ ls
+[?2004lfile1  file2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cmp fl[Kile1 file2
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ ls >>[K al[Kal[Kalist
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cp m1[K[Kf[K[K[Kmp fil1 aaalist 
+[?2004lcmp: fil1: No such file or directory
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cmp fil1 aaalist [C[1P[1@e[1@1
+[?2004lfile1 aaalist differ: byte 4, line 1
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ dfi[K[Kiff file aaalist 
+[?2004ldiff: file: No such file or directory
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ diff file aaalist [1@1
+[?2004l1c1
+< aaa
+---
+> aaalist
+2a3
+> file2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ t[Krm -i file1
+[?2004lrm: remove regular file 'file1'? y
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ ls
+[?2004laaalist  file2
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ psu[K u
+[?2004lUSER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+conner_c     9  0.0  0.0   7520  6528 pts/0    Ss   16:51   0:00 -bash
+conner_c  1347  0.0  0.0   3220  1092 pts/0    R+   18:10   0:00 script ConnerChilders_lab3.txt
+conner_c  1348  0.0  0.0   6208  5272 pts/1    Ss   18:10   0:00 bash -i
+conner_c  1406  0.0  0.0   7476  3140 pts/1    R+   18:14   0:00 ps u
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ s[Kps l[K-l
+[?2004lF S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  1348  1347  0  80   0 -  1552 do_wai pts/1    00:00:00 bash
+0 R  1000  1407  1348  0  80   0 -  1869 -      pts/1    00:00:00 ps
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ !!
+[?2004lps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  1348  1347  0  80   0 -  1552 do_wai pts/1    00:00:00 bash
+0 R  1000  1408  1348  0  80   0 -  1869 -      pts/1    00:00:00 ps
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab3/aaa[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab3/aaa[00m$ cd ..?[K/..
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60[00m$ cd lab2
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ head lab2.c
+[?2004l/*-------------------*/
+/*  Conner Childers  */
+/*      Lab 2        */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    printf("\nLab2. \n\n");
+    printf("Hello World.\n");
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ head lab2.c[C lab2.c- lab2.c2 lab2.c0 lab2.c
+[?2004l/*-------------------*/
+/*  Conner Childers  */
+/*      Lab 2        */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    printf("\nLab2. \n\n");
+    printf("Hello World.\n");
+    printf("Hi, Conner Childers. \n\n");
+    printf("Sometimes my genius... It's almost frightening\n");
+    printf("-Jeremy Clarkson\n");
+
+    return EXIT_SUCCESS;
+}
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ head -20 lab2.c[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktail lab2.c [K
+[?2004l
+int main(void) {
+    printf("\nLab2. \n\n");
+    printf("Hello World.\n");
+    printf("Hi, Conner Childers. \n\n");
+    printf("Sometimes my genius... It's almost frightening\n");
+    printf("-Jeremy Clarkson\n");
+
+    return EXIT_SUCCESS;
+}
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ tail lab2.c[C[C[C lab2.c- lab2.c2 lab2.c0 lab2.c
+[?2004l/*-------------------*/
+/*  Conner Childers  */
+/*      Lab 2        */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    printf("\nLab2. \n\n");
+    printf("Hello World.\n");
+    printf("Hi, Conner Childers. \n\n");
+    printf("Sometimes my genius... It's almost frightening\n");
+    printf("-Jeremy Clarkson\n");
+
+    return EXIT_SUCCESS;
+}
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ ls -al | less
+[?2004l[?1049h[22;0;0t[?1h=total 32
+drwxr-xr-x 2 conner_c conner_c  4096 Feb 20 17:36 .
+drwxr-xr-x 5 conner_c conner_c  4096 Feb 20 18:10 ..
+-rw-r--r-- 1 conner_c conner_c   760 Feb 20 17:36 ConnerChilders_lab2.txt
+-rwxr-xr-x 1 conner_c conner_c 15960 Feb 20 17:36 a.out
+-rw-r--r-- 1 conner_c conner_c   355 Feb 20 17:36 lab2.c
+[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ histro[K[Kr[Kory
+[?2004l    1  cd csc60/
+    2  mkdir lab3
+    3  cd lab
+    4  cd lab3
+    5  pwd
+    6  mkdir aaa
+    7  cd aaa/
+    8  pwd
+    9  cd ..
+   10  pwd
+   11  ls > file1
+   12  cat file1
+   13  less file1
+   14  file *
+   15  wc file1
+   16  wc *
+   17  grep file file1
+   18  cp file file2
+   19  cp file1 file2
+   20  ls
+   21  cd aaa/
+   22  pwd
+   23  cp ../file1
+   24  cp ../file1 .
+   25  ls
+   26  mv file1 file2
+   27  ls
+   28  mv ../file1 .
+   29  cd ..
+   30  ls
+   31  cd aaa
+   32  ls
+   33  cmp file1 file2
+   34  ls > aaalist
+   35  cmp fil1 aaalist 
+   36  cmp file1 aaalist 
+   37  diff file aaalist 
+   38  diff file1 aaalist 
+   39  rm -i file1
+   40  ls
+   41  ps u
+   42  ps -l
+   43  cd ../..
+   44  cd lab2
+   45  head lab2.c
+   46  head -20 lab2.c
+   47  tail lab2.c
+   48  tail -20 lab2.c
+   49  ls -al | less
+   50  history
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab2[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab2[00m$ exit
+[?2004lexit
+
+Script done on 2023-02-20 18:15:54-08:00 [COMMAND_EXIT_CODE="0"]
