@@ -1,0 +1,27 @@
+Script started on 2023-04-07 22:22:54-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab7[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab7[00m$ touch lab7.h
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab7[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab7[00m$ make
+[?2004lcc -c lab7.c -lm
+cc -c get_data.c -lm
+cc -c print_all.c -lm
+cc -c get_range_count.c -lm
+cc lab7.o get_data.o print_all.o get_range_count.o -o range -lm
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab7[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab7[00m$ ./range 
+[?2004l
+Conner Childers.  Lab 7. 
+
+File lab7a.dat:  
+There are 0 values in the range of 90 through 99
+out of a total of 29 values.
+
+
+Conner Childers.  Lab 7. 
+
+File lab7b.dat:  
+There are 0 values in the range of 90 through 99
+out of a total of 29 values.
+
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab7[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab7[00m$ exit
+[?2004lexit
+
+Script done on 2023-04-07 22:23:10-07:00 [COMMAND_EXIT_CODE="0"]
