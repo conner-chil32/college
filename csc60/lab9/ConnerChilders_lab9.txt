@@ -1,0 +1,53 @@
+Script started on 2023-05-09 16:04:37-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="158" LINES="62"]
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab9[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab9[00m$ touhc[K[Kcg[Kg[Kh 9_10.h
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab9[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab9[00m$ make
+[?2004lmake: 'lab9' is up to date.
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab9[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab9[00m$ l[K./lab9
+[?2004l
+csc60msh> 
+Argc = 0 
+
+csc60msh>  
+Argc = 0 
+
+csc60msh> pwd
+Argc = 1 
+Argv 0 = pwd 
+"/home/conner_c/college/csc60/lab9"
+
+csc60msh> cd ..
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = .. 
+
+csc60msh> pws d
+Argc = 1 
+Argv 0 = pwd 
+"/home/conner_c/college/csc60"
+
+csc60msh> cd lab9
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = lab9 
+
+csc60msh> [wd   pwd
+Argc = 1 
+Argv 0 = pwd 
+"/home/conner_c/college/csc60/lab9"
+
+csc60msh> cd
+Argc = 1 
+Argv 0 = cd 
+
+csc60msh> pwd
+Argc = 1 
+Argv 0 = pwd 
+"/home/conner_c"
+
+csc60msh> exit
+Argc = 1 
+Argv 0 = exit 
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab9[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab9[00m$ exit
+[?2004lexit
+
+Script done on 2023-05-09 16:05:24-07:00 [COMMAND_EXIT_CODE="0"]

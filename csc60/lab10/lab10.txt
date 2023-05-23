@@ -1,0 +1,151 @@
+Script started on 2023-05-19 16:20:31-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab10[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab10[00m$ touch lab9_10.h
+[?2004l[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab10[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab10[00m$ make
+[?2004lgcc -c lab10.c
+gcc -c ProcessExtCmd.c
+gcc -c Redirect.c
+gcc -c RunExtCmd.c 
+gcc -g lab10.o ParseCmd.o ProcessExtCmd.o Redirect.o RunExtCmd.o -o lab10
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab10[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab10[00m$ ./lab10
+[?2004l
+csc60msh> ls > lsout
+Argc = 3 
+Argv 0 = ls 
+Argv 1 = > 
+Argv 2 = lsout 
+Child returned status: 0
+
+
+csc60msh> car t lsoit  ut
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = lsout 
+ParseCmd.c
+ParseCmd.o
+ProcessExtCmd.c
+ProcessExtCmd.o
+Redirect.c
+Redirect.o
+RunExtCmd.c
+RunExtCmd.o
+lab10
+lab10.c
+lab10.o
+lab10.txt
+lab9_10.h
+lsout
+makefile
+Child returned status: 0
+
+
+csc60msh> ls   > lsout>  > file1
+Argc = 5 
+Argv 0 = ls 
+Argv 1 = > 
+Argv 2 = lsout 
+Argv 3 = > 
+Argv 4 = file1 
+Cannot Output to more than one file
+Child returned status: 256
+
+
+csc60msh> car t gfo   foot.txt      t o.txt
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = foo.txt 
+cat: foo.txt: No such file or directory
+Child returned status: 256
+
+
+csc60msh> > lsout
+Argc = 2 
+Argv 0 = > 
+Argv 1 = lsout 
+No Command Entered
+Child returned status: 256
+
+
+csc60msh> < lsout
+Argc = 2 
+Argv 0 = < 
+Argv 1 = lsout 
+No command entered
+Child returned status: 256
+
+
+csc60msh> wc M < lsout
+Argc = 3 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+ 15  15 157
+Child returned status: 0
+
+
+csc60msh> wc < s lsot ut > wcout
+Argc = 5 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+Argv 3 = > 
+Argv 4 = wcout 
+Child returned status: 0
+
+
+csc60msh> cat wcout
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = wcout 
+ 15  15 157
+Child returned status: 0
+
+
+csc60msh> wc < lsout < wcout
+Argc = 5 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+Argv 3 = < 
+Argv 4 = wcout 
+Cannot input from more than one file
+Child returned status: 256
+
+
+csc60msh> cd ..? /lab2
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = ../lab2 
+
+csc60msh> pwd
+Argc = 1 
+Argv 0 = pwd 
+"/home/conner_c/college/csc60/lab2"
+
+csc60msh> gcc lab2.c
+Argc = 2 
+Argv 0 = gcc 
+Argv 1 = lab2.c 
+Child returned status: 0
+
+
+csc60msh> ./aou  .out
+Argc = 1 
+Argv 0 = ./a.out 
+
+Lab2. 
+
+Hello World.
+Hi, Conner Childers. 
+
+Sometimes my genius... It's almost frightening
+-Jeremy Clarkson
+Child returned status: 0
+
+
+csc60msh> exit
+Argc = 1 
+Argv 0 = exit 
+[?2004h]0;conner_c@LAPTOP-E7HJQJVH: ~/college/csc60/lab10[01;32mconner_c@LAPTOP-E7HJQJVH[00m:[01;34m~/college/csc60/lab10[00m$ exit
+[?2004lexit
+
+Script done on 2023-05-19 16:22:04-07:00 [COMMAND_EXIT_CODE="0"]
