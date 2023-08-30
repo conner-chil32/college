@@ -5,9 +5,9 @@ This is a repo containing all the comp. sci work I have done at Sacramento State
 
 Class Links:
 
-[CSC 60](https://github.com/conner-chil32/college/tree/master/csc60) __(Year 1 | Semester 1)__
-[CSC 130](https://github.com/conner-chil32/college/tree/master/csc130) __(Year 1 | Semester 2)__
-[CSC 131](https://github.com/conner-chil32/college/tree/master/csc131) __(Year 1 | Semester 2)__
+[CSC 60](https://github.com/conner-chil32/college/tree/master/csc60) __(Year 1 | Semester 1)__ \n
+[CSC 130](https://github.com/conner-chil32/college/tree/master/csc130) __(Year 1 | Semester 2)__ \n
+[CSC 131](https://github.com/conner-chil32/college/tree/master/csc131) __(Year 1 | Semester 2)__ \n
 
 
 (Author: Conner Childers)
