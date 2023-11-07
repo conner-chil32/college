@@ -1,0 +1,12 @@
+Is Stack Empty?: false
+With
+Great
+Power
+Is Stack Empty?: true
+
+
+Is Queue Empty?: false
+Comes
+Great
+Responsibility
+Is Queue Empty?: true

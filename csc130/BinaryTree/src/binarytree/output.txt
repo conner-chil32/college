@@ -1,0 +1,26 @@
+Testing binary tree
+-------------------
++---Cat
+  +---Dog
+    +---Hamster
+    +---Mouse
+  +---Chicken
+
+Testing Pre/In/Postorder tree printing
+--------------------------------------
++---A
+  +---B
+    +---D
+    +---E
+  +---C
+    +---F
+      +---H
+      +---I
+    +---G
+
+Preorder:
+A B D E C F H I G 
+Inorder:
+D B E A H F I C G 
+Postorder:
+D E B H I F G C A 
