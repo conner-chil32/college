@@ -1,6 +1,17 @@
-# CSC 131 (Conner Childers)
-![Sac State Logo](https://upload.wikimedia.org/wikipedia/commons/3/36/California_State_University%2C_Sacramento_seal.svg) 
+# Pyro
+![Project Logo](https://freesvg.org/img/glossy-flame.png)<br>
+```
+This is a temporary image while the main image it being worked on
+```
+<br>
+Pyro is a Firestore to PDF Parser that dynamically takes Firestore/Firebase data and parses it into a legible PDF which is sent via email to a specificied user.
+<br>
 
-This is a repo containing all the comp. sci work I have done at Sacramento State University for CSC 131.
+<br>*Authors:*
 
-(Author: Conner Childers)
+[Hashem Battah](hashembattah2@gmail.com) <br>
+[Conner Childers](fishbacon561@gmail.com) <br>
+[Daniel Wiggins](danielwiggins184@gmail.com) <br>
+[Mahmoud Alqaisi](mahmoudalqaisi02@gmail.com) <br>
+[Wencai Ma](wencaiyang246@gmail.com) <br>
+[Tim George](timgeorge523@gmail.com)<br>
