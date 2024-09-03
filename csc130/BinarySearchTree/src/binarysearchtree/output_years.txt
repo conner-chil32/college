@@ -1,0 +1,16 @@
++--- 2020: Great Toilet Paper Shortage   
+  +--- 1839: Sutter's Fort founded
+    +--- 1783: United States Constitution enacted
+      +--- 1776: American Revolution
+        +--- 0: END
+    +--- 1846: Bear Flag Revolt
+      +--- 1947: Sacramento State founded 
+        +--- 1850: California joins the United States
+          +--- 1848: Gold Rush begins 
+        +--- 1964: Buffalo wings invented
+          +--- 1953: Cheese Whiz was invented (Nacho Era began)
+
+Buffalo wings invented
+Great Toilet Paper Shortage    Sutter's Fort founded United States Constitution enacted American Revolution END Bear Flag Revolt Sacramento State founded  California joins the United States Gold Rush begins  Buffalo wings invented Cheese Whiz was invented (Nacho Era began) 
+END American Revolution United States Constitution enacted Sutter's Fort founded Bear Flag Revolt Gold Rush begins  California joins the United States Sacramento State founded  Cheese Whiz was invented (Nacho Era began) Buffalo wings invented Great Toilet Paper Shortage    
+END American Revolution United States Constitution enacted Gold Rush begins  California joins the United States Cheese Whiz was invented (Nacho Era began) Buffalo wings invented Sacramento State founded  Bear Flag Revolt Sutter's Fort founded Great Toilet Paper Shortage    

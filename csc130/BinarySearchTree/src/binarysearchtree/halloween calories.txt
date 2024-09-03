@@ -1,0 +1,20 @@
+73
+M&M's Fun size
+60
+Tootsie Pop
+40
+Starburst Fun Size
+70
+Kit Kat Snack Size
+30
+Laffy Taffy
+80
+Snickers Fun Size
+50
+Nerds Mini Box
+77
+Hershey's Milk Chocolate Fun Size
+82
+Almond Joy Snack Size
+0
+END

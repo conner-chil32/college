@@ -1,0 +1,362 @@
++--- 888: Toll-Free Service
+  +--- 618: Illinois: Centralia
+    +--- 360: Washington: Olympia
+      +--- 281: Texas: Houston
+        +--- 204: Manitoba
+          +--- 203: Connecticut: New Haven
+            +--- 202: District Of Columbia: Washington
+              +--- 201: New Jersey: Hackensack
+                +--- 0: END
+          +--- 217: Illinois: Springfield
+            +--- 212: New York: New York City
+              +--- 209: California: Modesto
+                +--- 205: Alabama: Birmingham
+                  +--- 208: Idaho
+                    +--- 207: Maine
+                      +--- 206: Washington: Seattle
+                +--- 210: Texas: San Antonio
+              +--- 216: Ohio: Cleveland
+                +--- 215: Pennsylvania: Philadelphia
+                  +--- 213: California: Los Angeles
+                    +--- 214: Texas: Dallas
+            +--- 269: Michigan: Battle Creek
+              +--- 250: British Columbia: Prince Rupert
+                +--- 246: Barbados
+                  +--- 240: Maryland: Bethesda
+                    +--- 228: Mississippi: Biloxi
+                      +--- 226: Ontario: London
+                        +--- 224: Illinois: Waukegan
+                          +--- 218: Minnesota: Duluth
+                            +--- 219: Indiana: Gary
+                          +--- 225: Louisiana: Baton Rouge
+                      +--- 229: Georgia: Albany
+                        +--- 239: Florida: Fort Myers
+                          +--- 231: Michigan: Traverse City
+                            +--- 234: Ohio: Akron
+                    +--- 242: Bahamas
+                  +--- 249: Ontario: Sault Ste Marie
+                    +--- 248: Michigan: Pontiac
+                +--- 268: Antigua and Barbuda
+                  +--- 256: Alabama: Huntsville
+                    +--- 252: North Carolina: Rocky Mount
+                      +--- 251: Alabama: Mobile
+                      +--- 253: Washington: Tacoma
+                        +--- 254: Texas: Waco
+                    +--- 264: Anguilla
+                      +--- 262: Wisconsin: Racine
+                        +--- 260: Indiana: Fort Wayne
+                      +--- 267: Pennsylvania: Philadelphia
+              +--- 279: California: Sacramento
+                +--- 276: Virginia: Abington
+                  +--- 270: Kentucky: Bowling Green
+        +--- 315: New York: Syracuse
+          +--- 309: Illinois: Peoria
+            +--- 308: Nebraska: North Platte
+              +--- 284: British Virgin Islands
+                +--- 289: Ontario: Hamilton
+                  +--- 305: Florida: Key West
+                    +--- 301: Maryland: Cumberland
+                      +--- 303: Colorado: Denver
+                        +--- 302: Delaware
+                        +--- 304: West Virginia
+                    +--- 306: Saskatchewan
+                      +--- 307: Wyoming
+            +--- 310: California: Malibu
+              +--- 313: Michigan: Detroit
+                +--- 312: Illinois: Chicago
+                +--- 314: Missouri: Saint Louis
+          +--- 331: Illinois: Aurora
+            +--- 318: Louisiana: Shreveport
+              +--- 317: Indiana: Indianapolis
+                +--- 316: Kansas: Wichita
+              +--- 330: Ohio: Akron
+                +--- 323: California: Florence
+                  +--- 319: Iowa: Cedar Rapids
+                    +--- 320: Minnesota: Saint Cloud
+                      +--- 321: Florida: Orlando
+                  +--- 325: Texas: San Angelo
+            +--- 352: Florida: Gainesville
+              +--- 336: North Carolina: Winston Salem
+                +--- 334: Alabama: Montgomery
+                +--- 337: Louisiana: Lake Charles
+                  +--- 339: Massachusetts: Waltham
+                    +--- 340: Virgin Islands
+                      +--- 351: Massachusetts: Salem
+                        +--- 347: New York: New York City
+                          +--- 343: Ontario: Ottawa
+                            +--- 345: Cayman Islands
+      +--- 473: Grenada
+        +--- 470: Georgia: Atlanta
+          +--- 410: Maryland: Annapolis
+            +--- 385: Utah: Salt Lake City
+              +--- 361: Texas: Corpus Christi
+              +--- 406: Montana
+                +--- 401: Rhode Island
+                  +--- 386: Florida: Daytona Beach
+                  +--- 405: Oklahoma: Oklahoma City
+                    +--- 403: Alberta: Calgary
+                      +--- 402: Nebraska: Lincoln
+                      +--- 404: Georgia: Atlanta
+                +--- 408: California: San Jose
+                  +--- 407: Florida: Orlando
+                  +--- 409: Texas: Galveston
+            +--- 440: Ohio: Ashtabula
+              +--- 416: Ontario: Toronto
+                +--- 414: Wisconsin: Milwaukee
+                  +--- 413: Massachusetts: Springfield
+                    +--- 412: Pennsylvania: Pittsburgh
+                  +--- 415: California: San Francisco
+                +--- 418: Quebec: Quebec
+                  +--- 417: Missouri: Springfield
+                  +--- 430: Texas: Tyler
+                    +--- 419: Ohio: Toledo
+                      +--- 423: Tennessee: Chattanooga
+                        +--- 425: Washington: Everett
+                          +--- 424: California: Santa Monica
+                    +--- 435: Utah: Cedar City
+                      +--- 434: Virginia: Lynchburg
+                        +--- 432: Texas: Midland
+                      +--- 438: Quebec: Montreal
+              +--- 441: Bermuda
+                +--- 458: Oregon: Eugene
+                  +--- 442: California: Escondido
+                    +--- 450: Quebec: Saint Lambert
+                      +--- 443: Maryland: Baltimore
+                      +--- 456: International Inbound Services
+                  +--- 469: Texas: Dallas
+        +--- 561: Florida: West Palm Beach
+          +--- 505: New Mexico
+            +--- 504: Louisiana: New Orleans
+              +--- 502: Kentucky: Frankfort
+                +--- 475: Connecticut: Bridgeport
+                  +--- 478: Georgia: Macon
+                    +--- 479: Arkansas: Fort Smith
+                      +--- 501: Arkansas: Little Rock
+                        +--- 484: Pennsylvania: Allentown
+                          +--- 480: Arizona: Tempe
+                +--- 503: Oregon: Astoria
+            +--- 507: Minnesota: Rochester
+              +--- 506: New Brunswick
+              +--- 510: California: Oakland
+                +--- 509: Washington: Spokane
+                  +--- 508: Massachusetts: Brockton
+                +--- 539: Oklahoma: Tulsa
+                  +--- 515: Iowa: Des Moines
+                    +--- 513: Ohio: Cincinnati
+                      +--- 512: Texas: Austin
+                      +--- 514: Quebec: Montreal
+                    +--- 517: Michigan: Lansing
+                      +--- 516: New York: Hempstead
+                      +--- 534: Wisconsin: Eau Claire
+                        +--- 518: New York: Albany
+                          +--- 530: California: Chico
+                            +--- 519: Ontario: London
+                              +--- 520: Arizona: Tucson
+                  +--- 559: California: Fresno
+                    +--- 551: New Jersey: Hackensack
+                      +--- 540: Virginia: Harrisonburg
+                        +--- 541: Oregon: Medford
+          +--- 616: Michigan: Grand Rapids
+            +--- 614: Ohio: Columbus
+              +--- 579: Quebec: Terrebone
+                +--- 573: Missouri: Jefferson City
+                  +--- 562: California: Long Beach
+                    +--- 571: Virginia: Arlington
+                      +--- 570: Pennsylvania: Scranton
+                        +--- 567: Ohio: Toledo
+                          +--- 563: Iowa: Dubuque
+                  +--- 574: Indiana: South Bend
+                    +--- 575: New Mexico: Las Cruces
+                +--- 603: New Hampshire
+                  +--- 580: Oklahoma: Lawton
+                    +--- 587: Alberta: Calgary
+                      +--- 586: Michigan: Port Huron
+                        +--- 585: New York: Rochester
+                          +--- 581: Quebec: Quebec City
+                      +--- 601: Mississippi: Jackson
+                        +--- 600: Canadian Services
+                        +--- 602: Arizona: Phoenix
+                  +--- 606: Kentucky: Ashland
+                    +--- 604: British Columbia: Vancouver
+                      +--- 605: South Dakota
+                    +--- 610: Pennsylvania: Allentown
+                      +--- 607: New York: Binghamton
+                        +--- 609: New Jersey: Trenton
+                          +--- 608: Wisconsin: Madison
+                      +--- 612: Minnesota: Minneapolis
+                        +--- 613: Ontario: Ottawa
+              +--- 615: Tennessee: Nashville
+            +--- 617: Massachusetts: Boston
+    +--- 765: Indiana: Kokomo
+      +--- 762: Georgia: Augusta
+        +--- 718: New York: New York City
+          +--- 649: Turks and Caicos Islands
+            +--- 641: Iowa: Mason City
+              +--- 619: California: San Diego
+                +--- 636: Missouri: Saint Charles
+                  +--- 631: New York: Suffolk County
+                    +--- 623: Arizona: Sun City
+                      +--- 620: Kansas: Dodge City
+                      +--- 630: Illinois: Aurora
+                        +--- 626: California: Pasadena
+              +--- 646: New York: New York City
+                +--- 647: Ontario: Toronto
+            +--- 678: Georgia: Atlanta
+              +--- 661: California: Bakersfield
+                +--- 657: California: Anaheim
+                  +--- 651: Minnesota: Saint Paul
+                    +--- 650: California: Palo Alto
+                  +--- 660: Missouri: Marshall
+                +--- 664: Montserrat
+                  +--- 662: Mississippi: Greenville
+                  +--- 670: Northern Mariana
+                    +--- 671: Guam
+              +--- 701: North Dakota
+                +--- 684: American Samoa
+                  +--- 682: Texas: Fort Worth
+                    +--- 681: West Virginia: Charleston
+                  +--- 700: Interexchange Carrier Services
+                +--- 712: Iowa: Sioux City
+                  +--- 706: Georgia: Columbus
+                    +--- 704: North Carolina: Charlotte
+                      +--- 702: Nevada: Las Vegas
+                        +--- 703: Virginia: Arlington
+                      +--- 705: Ontario: North Bay
+                    +--- 709: Newfoundland and Labrador
+                      +--- 708: Illinois: Melrose Park
+                        +--- 707: California: Santa Rosa
+                      +--- 710: United States Government
+                  +--- 717: Pennsylvania: Harrisburg
+                    +--- 714: California: Santa Ana
+                      +--- 713: Texas: Houston
+                      +--- 715: Wisconsin: Eau Claire
+                        +--- 716: New York: Buffalo
+          +--- 740: Ohio: Portsmouth
+            +--- 734: Michigan: Ann Arbor
+              +--- 731: Tennessee: Jackson
+                +--- 727: Florida: Saint Petersburg
+                  +--- 720: Colorado: Denver
+                    +--- 719: Colorado: Pueblo
+                    +--- 724: Pennsylvania: New Castle
+                      +--- 721: Sint Maarten
+                +--- 732: New Jersey: New Brunswick
+            +--- 747: California: Burbank
+              +--- 757: Virginia: Virginia Beach
+                +--- 754: Florida: Fort Lauderdale
+                +--- 758: Saint Lucia
+                  +--- 760: California: Palm Springs
+        +--- 763: Minnesota: Maple Grove
+      +--- 866: Toll-Free Service
+        +--- 809: Dominican Republic
+          +--- 769: Mississippi: Jackson
+            +--- 767: Dominica
+            +--- 772: Florida: Vero Beach
+              +--- 770: Georgia: Atlanta
+              +--- 802: Vermont
+                +--- 774: Massachusetts: Brockton
+                  +--- 773: Illinois: Chicago
+                  +--- 779: Illinois: Rockford
+                    +--- 778: British Columbia: Victoria
+                      +--- 775: Nevada: Carson City
+                    +--- 781: Massachusetts: Waltham
+                      +--- 780: Alberta: Edmonton
+                      +--- 786: Florida: Miami
+                        +--- 784: St Vincent and the Grenadines
+                          +--- 785: Kansas: Topeka
+                        +--- 800: Toll-Free Service
+                          +--- 787: Puerto Rico
+                          +--- 801: Utah: Salt Lake City
+                +--- 805: California: Ventura
+                  +--- 803: South Carolina: Columbia
+                    +--- 804: Virginia: Richmond
+                  +--- 808: Hawaii
+                    +--- 806: Texas: Amarillo
+                      +--- 807: Ontario: Thunder Bay
+          +--- 850: Florida: Tallahassee
+            +--- 832: Texas: Houston
+              +--- 817: Texas: Fort Worth
+                +--- 815: Illinois: Joliet
+                  +--- 813: Florida: Tampa
+                    +--- 810: Michigan: Flint
+                      +--- 812: Indiana: Evansville
+                    +--- 814: Pennsylvania: Erie
+                  +--- 816: Missouri: Kansas City
+                +--- 818: California: Burbank
+                  +--- 828: North Carolina: Asheville
+                    +--- 819: Quebec: Sherbrooke
+                    +--- 831: California: Monterey
+                      +--- 829: Dominican Republic
+                        +--- 830: Texas: Del Rio
+              +--- 848: New Jersey: New Brunswick
+                +--- 847: Illinois: Evanston
+                  +--- 845: New York: Poughkeepsie
+                    +--- 843: South Carolina: Charleston
+                +--- 849: Dominican Republic: Santo Domingo
+            +--- 856: New Jersey: Vineland
+              +--- 855: Toll-Free Service
+              +--- 857: Massachusetts: Boston
+                +--- 859: Kentucky: Lexington
+                  +--- 858: California: San Diego
+                  +--- 864: South Carolina: Greenville
+                    +--- 860: Connecticut: Hartford
+                      +--- 863: Florida: Lakeland
+                        +--- 862: New Jersey: Newark
+                    +--- 865: Tennessee: Knoxville
+        +--- 872: Illinois: Chicago
+          +--- 869: Saint Kitts and Nevis
+            +--- 868: Trinidad and Tobago
+              +--- 867: Northwest Territories Nunavut Yukon
+            +--- 870: Arkansas: Pine Bluff
+          +--- 877: Toll-Free Service
+            +--- 876: Jamaica
+            +--- 878: Pennsylvania: New Castle
+  +--- 941: Florida: Bradenton
+    +--- 931: Tennessee: Columbia
+      +--- 900: Premium Services
+        +--- 901: Tennessee: Memphis
+          +--- 918: Oklahoma: Tulsa
+            +--- 915: Texas: El Paso
+              +--- 903: Texas: Tyler
+                +--- 902: Nova Scotia Prince Edward Island
+                +--- 912: Georgia: Savannah
+                  +--- 909: California: San Bernardino
+                    +--- 906: Michigan: Escanaba
+                      +--- 904: Florida: Jacksonville
+                        +--- 905: Ontario: Hamilton
+                      +--- 908: New Jersey: Elizabeth
+                        +--- 907: Alaska
+                    +--- 910: North Carolina: Fayetteville
+                  +--- 914: New York: White Plains
+                    +--- 913: Kansas: Kansas City
+              +--- 917: New York: New York City
+                +--- 916: California: Sacramento
+            +--- 929: New York: New York City
+              +--- 919: North Carolina: Raleigh
+                +--- 925: California: Concord
+                  +--- 920: Wisconsin: Green Bay
+                  +--- 928: Arizona: Flagstaff
+      +--- 939: Puerto Rico
+        +--- 936: Texas: Huntsville
+          +--- 937: Ohio: Dayton
+            +--- 938: Alabama: Huntsville
+        +--- 940: Texas: Wichita Falls
+    +--- 989: Michigan: Saginaw
+      +--- 978: Massachusetts: Salem
+        +--- 949: California: Irvine
+          +--- 947: Michigan: Pontiac
+          +--- 956: Texas: Brownsville
+            +--- 951: California: Temecula
+              +--- 954: Florida: Fort Lauderdale
+                +--- 952: Minnesota: Bloomington
+            +--- 971: Oregon: Salem
+              +--- 970: Colorado: Aspen
+              +--- 973: New Jersey: Newark
+                +--- 972: Texas: Dallas
+        +--- 979: Texas: Bryan
+          +--- 985: Louisiana: Houma
+            +--- 980: North Carolina: Charlotte
+
+California: San Jose
+Toll-Free Service Illinois: Centralia Washington: Olympia Texas: Houston Manitoba Connecticut: New Haven District Of Columbia: Washington New Jersey: Hackensack END Illinois: Springfield New York: New York City California: Modesto Alabama: Birmingham Idaho Maine Washington: Seattle Texas: San Antonio Ohio: Cleveland Pennsylvania: Philadelphia California: Los Angeles Texas: Dallas Michigan: Battle Creek British Columbia: Prince Rupert Barbados Maryland: Bethesda Mississippi: Biloxi Ontario: London Illinois: Waukegan Minnesota: Duluth Indiana: Gary Louisiana: Baton Rouge Georgia: Albany Florida: Fort Myers Michigan: Traverse City Ohio: Akron Bahamas Ontario: Sault Ste Marie Michigan: Pontiac Antigua and Barbuda Alabama: Huntsville North Carolina: Rocky Mount Alabama: Mobile Washington: Tacoma Texas: Waco Anguilla Wisconsin: Racine Indiana: Fort Wayne Pennsylvania: Philadelphia California: Sacramento Virginia: Abington Kentucky: Bowling Green New York: Syracuse Illinois: Peoria Nebraska: North Platte British Virgin Islands Ontario: Hamilton Florida: Key West Maryland: Cumberland Colorado: Denver Delaware West Virginia Saskatchewan Wyoming California: Malibu Michigan: Detroit Illinois: Chicago Missouri: Saint Louis Illinois: Aurora Louisiana: Shreveport Indiana: Indianapolis Kansas: Wichita Ohio: Akron California: Florence Iowa: Cedar Rapids Minnesota: Saint Cloud Florida: Orlando Texas: San Angelo Florida: Gainesville North Carolina: Winston Salem Alabama: Montgomery Louisiana: Lake Charles Massachusetts: Waltham Virgin Islands Massachusetts: Salem New York: New York City Ontario: Ottawa Cayman Islands Grenada Georgia: Atlanta Maryland: Annapolis Utah: Salt Lake City Texas: Corpus Christi Montana Rhode Island Florida: Daytona Beach Oklahoma: Oklahoma City Alberta: Calgary Nebraska: Lincoln Georgia: Atlanta California: San Jose Florida: Orlando Texas: Galveston Ohio: Ashtabula Ontario: Toronto Wisconsin: Milwaukee Massachusetts: Springfield Pennsylvania: Pittsburgh California: San Francisco Quebec: Quebec Missouri: Springfield Texas: Tyler Ohio: Toledo Tennessee: Chattanooga Washington: Everett California: Santa Monica Utah: Cedar City Virginia: Lynchburg Texas: Midland Quebec: Montreal Bermuda Oregon: Eugene California: Escondido Quebec: Saint Lambert Maryland: Baltimore International Inbound Services Texas: Dallas Florida: West Palm Beach New Mexico Louisiana: New Orleans Kentucky: Frankfort Connecticut: Bridgeport Georgia: Macon Arkansas: Fort Smith Arkansas: Little Rock Pennsylvania: Allentown Arizona: Tempe Oregon: Astoria Minnesota: Rochester New Brunswick California: Oakland Washington: Spokane Massachusetts: Brockton Oklahoma: Tulsa Iowa: Des Moines Ohio: Cincinnati Texas: Austin Quebec: Montreal Michigan: Lansing New York: Hempstead Wisconsin: Eau Claire New York: Albany California: Chico Ontario: London Arizona: Tucson California: Fresno New Jersey: Hackensack Virginia: Harrisonburg Oregon: Medford Michigan: Grand Rapids Ohio: Columbus Quebec: Terrebone Missouri: Jefferson City California: Long Beach Virginia: Arlington Pennsylvania: Scranton Ohio: Toledo Iowa: Dubuque Indiana: South Bend New Mexico: Las Cruces New Hampshire Oklahoma: Lawton Alberta: Calgary Michigan: Port Huron New York: Rochester Quebec: Quebec City Mississippi: Jackson Canadian Services Arizona: Phoenix Kentucky: Ashland British Columbia: Vancouver South Dakota Pennsylvania: Allentown New York: Binghamton New Jersey: Trenton Wisconsin: Madison Minnesota: Minneapolis Ontario: Ottawa Tennessee: Nashville Massachusetts: Boston Indiana: Kokomo Georgia: Augusta New York: New York City Turks and Caicos Islands Iowa: Mason City California: San Diego Missouri: Saint Charles New York: Suffolk County Arizona: Sun City Kansas: Dodge City Illinois: Aurora California: Pasadena New York: New York City Ontario: Toronto Georgia: Atlanta California: Bakersfield California: Anaheim Minnesota: Saint Paul California: Palo Alto Missouri: Marshall Montserrat Mississippi: Greenville Northern Mariana Guam North Dakota American Samoa Texas: Fort Worth West Virginia: Charleston Interexchange Carrier Services Iowa: Sioux City Georgia: Columbus North Carolina: Charlotte Nevada: Las Vegas Virginia: Arlington Ontario: North Bay Newfoundland and Labrador Illinois: Melrose Park California: Santa Rosa United States Government Pennsylvania: Harrisburg California: Santa Ana Texas: Houston Wisconsin: Eau Claire New York: Buffalo Ohio: Portsmouth Michigan: Ann Arbor Tennessee: Jackson Florida: Saint Petersburg Colorado: Denver Colorado: Pueblo Pennsylvania: New Castle Sint Maarten New Jersey: New Brunswick California: Burbank Virginia: Virginia Beach Florida: Fort Lauderdale Saint Lucia California: Palm Springs Minnesota: Maple Grove Toll-Free Service Dominican Republic Mississippi: Jackson Dominica Florida: Vero Beach Georgia: Atlanta Vermont Massachusetts: Brockton Illinois: Chicago Illinois: Rockford British Columbia: Victoria Nevada: Carson City Massachusetts: Waltham Alberta: Edmonton Florida: Miami St Vincent and the Grenadines Kansas: Topeka Toll-Free Service Puerto Rico Utah: Salt Lake City California: Ventura South Carolina: Columbia Virginia: Richmond Hawaii Texas: Amarillo Ontario: Thunder Bay Florida: Tallahassee Texas: Houston Texas: Fort Worth Illinois: Joliet Florida: Tampa Michigan: Flint Indiana: Evansville Pennsylvania: Erie Missouri: Kansas City California: Burbank North Carolina: Asheville Quebec: Sherbrooke California: Monterey Dominican Republic Texas: Del Rio New Jersey: New Brunswick Illinois: Evanston New York: Poughkeepsie South Carolina: Charleston Dominican Republic: Santo Domingo New Jersey: Vineland Toll-Free Service Massachusetts: Boston Kentucky: Lexington California: San Diego South Carolina: Greenville Connecticut: Hartford Florida: Lakeland New Jersey: Newark Tennessee: Knoxville Illinois: Chicago Saint Kitts and Nevis Trinidad and Tobago Northwest Territories Nunavut Yukon Arkansas: Pine Bluff Toll-Free Service Jamaica Pennsylvania: New Castle Florida: Bradenton Tennessee: Columbia Premium Services Tennessee: Memphis Oklahoma: Tulsa Texas: El Paso Texas: Tyler Nova Scotia Prince Edward Island Georgia: Savannah California: San Bernardino Michigan: Escanaba Florida: Jacksonville Ontario: Hamilton New Jersey: Elizabeth Alaska North Carolina: Fayetteville New York: White Plains Kansas: Kansas City New York: New York City California: Sacramento New York: New York City North Carolina: Raleigh California: Concord Wisconsin: Green Bay Arizona: Flagstaff Puerto Rico Texas: Huntsville Ohio: Dayton Alabama: Huntsville Texas: Wichita Falls Michigan: Saginaw Massachusetts: Salem California: Irvine Michigan: Pontiac Texas: Brownsville California: Temecula Florida: Fort Lauderdale Minnesota: Bloomington Oregon: Salem Colorado: Aspen New Jersey: Newark Texas: Dallas Texas: Bryan Louisiana: Houma North Carolina: Charlotte 
+END New Jersey: Hackensack District Of Columbia: Washington Connecticut: New Haven Manitoba Alabama: Birmingham Washington: Seattle Maine Idaho California: Modesto Texas: San Antonio New York: New York City California: Los Angeles Texas: Dallas Pennsylvania: Philadelphia Ohio: Cleveland Illinois: Springfield Minnesota: Duluth Indiana: Gary Illinois: Waukegan Louisiana: Baton Rouge Ontario: London Mississippi: Biloxi Georgia: Albany Michigan: Traverse City Ohio: Akron Florida: Fort Myers Maryland: Bethesda Bahamas Barbados Michigan: Pontiac Ontario: Sault Ste Marie British Columbia: Prince Rupert Alabama: Mobile North Carolina: Rocky Mount Washington: Tacoma Texas: Waco Alabama: Huntsville Indiana: Fort Wayne Wisconsin: Racine Anguilla Pennsylvania: Philadelphia Antigua and Barbuda Michigan: Battle Creek Kentucky: Bowling Green Virginia: Abington California: Sacramento Texas: Houston British Virgin Islands Ontario: Hamilton Maryland: Cumberland Delaware Colorado: Denver West Virginia Florida: Key West Saskatchewan Wyoming Nebraska: North Platte Illinois: Peoria California: Malibu Illinois: Chicago Michigan: Detroit Missouri: Saint Louis New York: Syracuse Kansas: Wichita Indiana: Indianapolis Louisiana: Shreveport Iowa: Cedar Rapids Minnesota: Saint Cloud Florida: Orlando California: Florence Texas: San Angelo Ohio: Akron Illinois: Aurora Alabama: Montgomery North Carolina: Winston Salem Louisiana: Lake Charles Massachusetts: Waltham Virgin Islands Ontario: Ottawa Cayman Islands New York: New York City Massachusetts: Salem Florida: Gainesville Washington: Olympia Texas: Corpus Christi Utah: Salt Lake City Florida: Daytona Beach Rhode Island Nebraska: Lincoln Alberta: Calgary Georgia: Atlanta Oklahoma: Oklahoma City Montana Florida: Orlando California: San Jose Texas: Galveston Maryland: Annapolis Pennsylvania: Pittsburgh Massachusetts: Springfield Wisconsin: Milwaukee California: San Francisco Ontario: Toronto Missouri: Springfield Quebec: Quebec Ohio: Toledo Tennessee: Chattanooga California: Santa Monica Washington: Everett Texas: Tyler Texas: Midland Virginia: Lynchburg Utah: Cedar City Quebec: Montreal Ohio: Ashtabula Bermuda California: Escondido Maryland: Baltimore Quebec: Saint Lambert International Inbound Services Oregon: Eugene Texas: Dallas Georgia: Atlanta Grenada Connecticut: Bridgeport Georgia: Macon Arkansas: Fort Smith Arizona: Tempe Pennsylvania: Allentown Arkansas: Little Rock Kentucky: Frankfort Oregon: Astoria Louisiana: New Orleans New Mexico New Brunswick Minnesota: Rochester Massachusetts: Brockton Washington: Spokane California: Oakland Texas: Austin Ohio: Cincinnati Quebec: Montreal Iowa: Des Moines New York: Hempstead Michigan: Lansing New York: Albany Ontario: London Arizona: Tucson California: Chico Wisconsin: Eau Claire Oklahoma: Tulsa Virginia: Harrisonburg Oregon: Medford New Jersey: Hackensack California: Fresno Florida: West Palm Beach California: Long Beach Iowa: Dubuque Ohio: Toledo Pennsylvania: Scranton Virginia: Arlington Missouri: Jefferson City Indiana: South Bend New Mexico: Las Cruces Quebec: Terrebone Oklahoma: Lawton Quebec: Quebec City New York: Rochester Michigan: Port Huron Alberta: Calgary Canadian Services Mississippi: Jackson Arizona: Phoenix New Hampshire British Columbia: Vancouver South Dakota Kentucky: Ashland New York: Binghamton Wisconsin: Madison New Jersey: Trenton Pennsylvania: Allentown Minnesota: Minneapolis Ontario: Ottawa Ohio: Columbus Tennessee: Nashville Michigan: Grand Rapids Massachusetts: Boston Illinois: Centralia California: San Diego Kansas: Dodge City Arizona: Sun City California: Pasadena Illinois: Aurora New York: Suffolk County Missouri: Saint Charles Iowa: Mason City New York: New York City Ontario: Toronto Turks and Caicos Islands California: Palo Alto Minnesota: Saint Paul California: Anaheim Missouri: Marshall California: Bakersfield Mississippi: Greenville Montserrat Northern Mariana Guam Georgia: Atlanta West Virginia: Charleston Texas: Fort Worth American Samoa Interexchange Carrier Services North Dakota Nevada: Las Vegas Virginia: Arlington North Carolina: Charlotte Ontario: North Bay Georgia: Columbus California: Santa Rosa Illinois: Melrose Park Newfoundland and Labrador United States Government Iowa: Sioux City Texas: Houston California: Santa Ana Wisconsin: Eau Claire New York: Buffalo Pennsylvania: Harrisburg New York: New York City Colorado: Pueblo Colorado: Denver Sint Maarten Pennsylvania: New Castle Florida: Saint Petersburg Tennessee: Jackson New Jersey: New Brunswick Michigan: Ann Arbor Ohio: Portsmouth California: Burbank Florida: Fort Lauderdale Virginia: Virginia Beach Saint Lucia California: Palm Springs Georgia: Augusta Minnesota: Maple Grove Indiana: Kokomo Dominica Mississippi: Jackson Georgia: Atlanta Florida: Vero Beach Illinois: Chicago Massachusetts: Brockton Nevada: Carson City British Columbia: Victoria Illinois: Rockford Alberta: Edmonton Massachusetts: Waltham St Vincent and the Grenadines Kansas: Topeka Florida: Miami Puerto Rico Toll-Free Service Utah: Salt Lake City Vermont South Carolina: Columbia Virginia: Richmond California: Ventura Texas: Amarillo Ontario: Thunder Bay Hawaii Dominican Republic Michigan: Flint Indiana: Evansville Florida: Tampa Pennsylvania: Erie Illinois: Joliet Missouri: Kansas City Texas: Fort Worth California: Burbank Quebec: Sherbrooke North Carolina: Asheville Dominican Republic Texas: Del Rio California: Monterey Texas: Houston South Carolina: Charleston New York: Poughkeepsie Illinois: Evanston New Jersey: New Brunswick Dominican Republic: Santo Domingo Florida: Tallahassee Toll-Free Service New Jersey: Vineland Massachusetts: Boston California: San Diego Kentucky: Lexington Connecticut: Hartford New Jersey: Newark Florida: Lakeland South Carolina: Greenville Tennessee: Knoxville Toll-Free Service Northwest Territories Nunavut Yukon Trinidad and Tobago Saint Kitts and Nevis Arkansas: Pine Bluff Illinois: Chicago Jamaica Toll-Free Service Pennsylvania: New Castle Toll-Free Service Premium Services Tennessee: Memphis Nova Scotia Prince Edward Island Texas: Tyler Florida: Jacksonville Ontario: Hamilton Michigan: Escanaba Alaska New Jersey: Elizabeth California: San Bernardino North Carolina: Fayetteville Georgia: Savannah Kansas: Kansas City New York: White Plains Texas: El Paso California: Sacramento New York: New York City Oklahoma: Tulsa North Carolina: Raleigh Wisconsin: Green Bay California: Concord Arizona: Flagstaff New York: New York City Tennessee: Columbia Texas: Huntsville Ohio: Dayton Alabama: Huntsville Puerto Rico Texas: Wichita Falls Florida: Bradenton Michigan: Pontiac California: Irvine California: Temecula Minnesota: Bloomington Florida: Fort Lauderdale Texas: Brownsville Colorado: Aspen Oregon: Salem Texas: Dallas New Jersey: Newark Massachusetts: Salem Texas: Bryan North Carolina: Charlotte Louisiana: Houma Michigan: Saginaw 
+END New Jersey: Hackensack District Of Columbia: Washington Connecticut: New Haven Washington: Seattle Maine Idaho Alabama: Birmingham Texas: San Antonio California: Modesto Texas: Dallas California: Los Angeles Pennsylvania: Philadelphia Ohio: Cleveland New York: New York City Indiana: Gary Minnesota: Duluth Louisiana: Baton Rouge Illinois: Waukegan Ontario: London Ohio: Akron Michigan: Traverse City Florida: Fort Myers Georgia: Albany Mississippi: Biloxi Bahamas Maryland: Bethesda Michigan: Pontiac Ontario: Sault Ste Marie Barbados Alabama: Mobile Texas: Waco Washington: Tacoma North Carolina: Rocky Mount Indiana: Fort Wayne Wisconsin: Racine Pennsylvania: Philadelphia Anguilla Alabama: Huntsville Antigua and Barbuda British Columbia: Prince Rupert Kentucky: Bowling Green Virginia: Abington California: Sacramento Michigan: Battle Creek Illinois: Springfield Manitoba Delaware West Virginia Colorado: Denver Maryland: Cumberland Wyoming Saskatchewan Florida: Key West Ontario: Hamilton British Virgin Islands Nebraska: North Platte Illinois: Chicago Missouri: Saint Louis Michigan: Detroit California: Malibu Illinois: Peoria Kansas: Wichita Indiana: Indianapolis Florida: Orlando Minnesota: Saint Cloud Iowa: Cedar Rapids Texas: San Angelo California: Florence Ohio: Akron Louisiana: Shreveport Alabama: Montgomery Cayman Islands Ontario: Ottawa New York: New York City Massachusetts: Salem Virgin Islands Massachusetts: Waltham Louisiana: Lake Charles North Carolina: Winston Salem Florida: Gainesville Illinois: Aurora New York: Syracuse Texas: Houston Texas: Corpus Christi Florida: Daytona Beach Nebraska: Lincoln Georgia: Atlanta Alberta: Calgary Oklahoma: Oklahoma City Rhode Island Florida: Orlando Texas: Galveston California: San Jose Montana Utah: Salt Lake City Pennsylvania: Pittsburgh Massachusetts: Springfield California: San Francisco Wisconsin: Milwaukee Missouri: Springfield California: Santa Monica Washington: Everett Tennessee: Chattanooga Ohio: Toledo Texas: Midland Virginia: Lynchburg Quebec: Montreal Utah: Cedar City Texas: Tyler Quebec: Quebec Ontario: Toronto Maryland: Baltimore International Inbound Services Quebec: Saint Lambert California: Escondido Texas: Dallas Oregon: Eugene Bermuda Ohio: Ashtabula Maryland: Annapolis Georgia: Atlanta Arizona: Tempe Pennsylvania: Allentown Arkansas: Little Rock Arkansas: Fort Smith Georgia: Macon Connecticut: Bridgeport Oregon: Astoria Kentucky: Frankfort Louisiana: New Orleans New Brunswick Massachusetts: Brockton Washington: Spokane Texas: Austin Quebec: Montreal Ohio: Cincinnati New York: Hempstead Arizona: Tucson Ontario: London California: Chico New York: Albany Wisconsin: Eau Claire Michigan: Lansing Iowa: Des Moines Oregon: Medford Virginia: Harrisonburg New Jersey: Hackensack California: Fresno Oklahoma: Tulsa California: Oakland Minnesota: Rochester New Mexico Iowa: Dubuque Ohio: Toledo Pennsylvania: Scranton Virginia: Arlington California: Long Beach New Mexico: Las Cruces Indiana: South Bend Missouri: Jefferson City Quebec: Quebec City New York: Rochester Michigan: Port Huron Canadian Services Arizona: Phoenix Mississippi: Jackson Alberta: Calgary Oklahoma: Lawton South Dakota British Columbia: Vancouver Wisconsin: Madison New Jersey: Trenton New York: Binghamton Ontario: Ottawa Minnesota: Minneapolis Pennsylvania: Allentown Kentucky: Ashland New Hampshire Quebec: Terrebone Tennessee: Nashville Ohio: Columbus Massachusetts: Boston Michigan: Grand Rapids Florida: West Palm Beach Grenada Washington: Olympia Kansas: Dodge City California: Pasadena Illinois: Aurora Arizona: Sun City New York: Suffolk County Missouri: Saint Charles California: San Diego Ontario: Toronto New York: New York City Iowa: Mason City California: Palo Alto Minnesota: Saint Paul Missouri: Marshall California: Anaheim Mississippi: Greenville Guam Northern Mariana Montserrat California: Bakersfield West Virginia: Charleston Texas: Fort Worth Interexchange Carrier Services American Samoa Virginia: Arlington Nevada: Las Vegas Ontario: North Bay North Carolina: Charlotte California: Santa Rosa Illinois: Melrose Park United States Government Newfoundland and Labrador Georgia: Columbus Texas: Houston New York: Buffalo Wisconsin: Eau Claire California: Santa Ana Pennsylvania: Harrisburg Iowa: Sioux City North Dakota Georgia: Atlanta Turks and Caicos Islands Colorado: Pueblo Sint Maarten Pennsylvania: New Castle Colorado: Denver Florida: Saint Petersburg New Jersey: New Brunswick Tennessee: Jackson Michigan: Ann Arbor Florida: Fort Lauderdale California: Palm Springs Saint Lucia Virginia: Virginia Beach California: Burbank Ohio: Portsmouth New York: New York City Minnesota: Maple Grove Georgia: Augusta Dominica Georgia: Atlanta Illinois: Chicago Nevada: Carson City British Columbia: Victoria Alberta: Edmonton Kansas: Topeka St Vincent and the Grenadines Puerto Rico Utah: Salt Lake City Toll-Free Service Florida: Miami Massachusetts: Waltham Illinois: Rockford Massachusetts: Brockton Virginia: Richmond South Carolina: Columbia Ontario: Thunder Bay Texas: Amarillo Hawaii California: Ventura Vermont Florida: Vero Beach Mississippi: Jackson Indiana: Evansville Michigan: Flint Pennsylvania: Erie Florida: Tampa Missouri: Kansas City Illinois: Joliet Quebec: Sherbrooke Texas: Del Rio Dominican Republic California: Monterey North Carolina: Asheville California: Burbank Texas: Fort Worth South Carolina: Charleston New York: Poughkeepsie Illinois: Evanston Dominican Republic: Santo Domingo New Jersey: New Brunswick Texas: Houston Toll-Free Service California: San Diego New Jersey: Newark Florida: Lakeland Connecticut: Hartford Tennessee: Knoxville South Carolina: Greenville Kentucky: Lexington Massachusetts: Boston New Jersey: Vineland Florida: Tallahassee Dominican Republic Northwest Territories Nunavut Yukon Trinidad and Tobago Arkansas: Pine Bluff Saint Kitts and Nevis Jamaica Pennsylvania: New Castle Toll-Free Service Illinois: Chicago Toll-Free Service Indiana: Kokomo Illinois: Centralia Nova Scotia Prince Edward Island Ontario: Hamilton Florida: Jacksonville Alaska New Jersey: Elizabeth Michigan: Escanaba North Carolina: Fayetteville California: San Bernardino Kansas: Kansas City New York: White Plains Georgia: Savannah Texas: Tyler California: Sacramento New York: New York City Texas: El Paso Wisconsin: Green Bay Arizona: Flagstaff California: Concord North Carolina: Raleigh New York: New York City Oklahoma: Tulsa Tennessee: Memphis Premium Services Alabama: Huntsville Ohio: Dayton Texas: Huntsville Texas: Wichita Falls Puerto Rico Tennessee: Columbia Michigan: Pontiac Minnesota: Bloomington Florida: Fort Lauderdale California: Temecula Colorado: Aspen Texas: Dallas New Jersey: Newark Oregon: Salem Texas: Brownsville California: Irvine North Carolina: Charlotte Louisiana: Houma Texas: Bryan Massachusetts: Salem Michigan: Saginaw Florida: Bradenton Toll-Free Service 
