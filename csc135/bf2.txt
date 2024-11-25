@@ -1,0 +1,10 @@
+Bf program prints '!' char three times and then a newline
+
++++++++++++++++++++++++++++++++++   # increment data(0) 33 times to ASCII of '!'
+>                                   # increment idx
++++                                 # increment data(1) 3 times for loop count
+[                                   # while data(1) nonzero
+    <.>-                            # print data(0) and decrement data(1)
+]
+++++++++++                          # increment data(1) from 0 to 10; ASCII for \n
+.                                   # print the newline
