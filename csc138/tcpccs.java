@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.net.http.WebSocket.Listener;
 import java.util.Scanner;
 
 // Written By: Conner Childers, 4/5/2025
@@ -92,9 +91,12 @@ public class tcpccs {
         @Override
         public void run() {
            try {
-                Scanner scanner = new Scanner(System.in);
                 while(socket.isConnected()) {
+                    Scanner scanner = new Scanner(System.in);
                     String msg = scanner.nextLine();
+                    if(msg.contains("/quit")) {
+                        close(socket, bufferedReader, bufferedWriter);
+                    }
                     bufferedWriter.write("[" + username + "] " + msg);
                     bufferedWriter.newLine();
                     bufferedWriter.flush();

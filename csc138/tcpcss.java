@@ -72,7 +72,50 @@ public class tcpcss {
             while(socket.isConnected()) {
                 try {
                     msg = bufferedReader.readLine();
-                    broadcast(msg);
+                    // general message & command handling
+                    if(msg.contains("/sendfile")) {         // send file
+                        String[] inputStrings = msg.split("\\s+");
+                        if(inputStrings.length != 4) {
+                            bufferedWriter.write("[Invalid Command | Usage: /sendfile <user> <filename>]");
+                        }
+                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
+                        String targetUser = inputStrings[2];
+                        String filePath = inputStrings[3];
+                    }
+                    if(msg.contains("/acceptfile")) {       // accept file
+                        String[] inputStrings = msg.split("\\s+");
+                        if(inputStrings.length != 2) {
+                            bufferedWriter.write("[Invalid Command | Usage: /acceptfile <user>]");
+                        }
+                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
+                        String targetUser = inputStrings[1];
+                    }
+                    if(msg.contains("/rejectfile")) {       // reject file
+                        String[] inputStrings = msg.split("\\s+");
+                        if(inputStrings.length != 2) {
+                            bufferedWriter.write("[Invalid Command | Usage: /rejectfile <user>]");
+                        }
+                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
+                        String targetUser = inputStrings[1];
+                    }
+                    if(msg.contains("/who")) {              // who
+                        bufferedWriter.write("[");
+                        for (ClientHandler client : clients) {
+                            bufferedWriter.write(client.clientName);
+                            if(client != clients.get(clients.size()-1)) {
+                                bufferedWriter.write(",");
+                            }
+                        }
+                        bufferedWriter.write("]");
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+                    }
+                    if(msg.contains("/quit")) {             // quit
+                        close(socket, bufferedReader, bufferedWriter);
+                    } 
+                    else {                                    // broadcast
+                        broadcast(msg);
+                    }
                 } catch(IOException e) {
                     close(socket, bufferedReader, bufferedWriter);
                     break;
