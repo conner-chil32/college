@@ -75,42 +75,100 @@ public class tcpcss {
                     // general message & command handling
                     if(msg.contains("/sendfile")) {         // send file
                         String[] inputStrings = msg.split("\\s+");
-                        if(inputStrings.length != 4) {
+                        if(inputStrings.length != 5) {
                             bufferedWriter.write("[Invalid Command | Usage: /sendfile <user> <filename>]");
                         }
-                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
                         String targetUser = inputStrings[2];
-                        String filePath = inputStrings[3];
+                        String filename = inputStrings[3];
+                        String filesize = inputStrings[4];
+
+                        String fileTransferNotice = new String("[File transfer initiated from " + clientName + " to " + targetUser + " " + filename + " " + filesize + "]");
+                        System.out.println(fileTransferNotice);
+
+                        for (ClientHandler client : clients) {
+                            if(client.clientName.contains(targetUser)) {
+                                client.bufferedWriter.write(fileTransferNotice);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                            if(client.clientName == clientName) {
+                                client.bufferedWriter.write(fileTransferNotice);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                        }
                     }
-                    if(msg.contains("/acceptfile")) {       // accept file
+                    else if(msg.contains("/acceptfile")) {       // accept file
                         String[] inputStrings = msg.split("\\s+");
-                        if(inputStrings.length != 2) {
+                        if(inputStrings.length != 3) {
                             bufferedWriter.write("[Invalid Command | Usage: /acceptfile <user>]");
                         }
-                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
-                        String targetUser = inputStrings[1];
+                        String targetUser = inputStrings[2];
+
+                        String fileTransferAccept = new String("[File transfer accepted from " + targetUser + " to " + clientName + "]");
+                        System.out.println(fileTransferAccept);
+
+                        for (ClientHandler client : clients) {
+                            if(client.clientName.contains(targetUser)) {
+
+                                client.bufferedWriter.write(fileTransferAccept);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                                
+                                // [adr] is the signal key that tells the client this is new socket info
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + Math.random() + ",rec");
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                            if(client.clientName == clientName) {
+
+                                client.bufferedWriter.write(fileTransferAccept);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + Math.random() + ",snd");
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                        }
+
                     }
-                    if(msg.contains("/rejectfile")) {       // reject file
+                    else if(msg.contains("/rejectfile")) {       // reject file
                         String[] inputStrings = msg.split("\\s+");
-                        if(inputStrings.length != 2) {
+                        if(inputStrings.length != 3) {
                             bufferedWriter.write("[Invalid Command | Usage: /rejectfile <user>]");
                         }
-                        String originUser = inputStrings[0].replaceAll("\\[|\\]", "");
-                        String targetUser = inputStrings[1];
+                        String targetUser = inputStrings[2];
+
+                        String fileTransferReject = new String("[File transfer rejected]");
+                        System.out.println(fileTransferReject);
+
+                        for (ClientHandler client : clients) {
+                            if(client.clientName.contains(targetUser)) {
+                                client.bufferedWriter.write(fileTransferReject);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                            if(client.clientName == clientName) {
+                                client.bufferedWriter.write(fileTransferReject);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                            }
+                        }
                     }
-                    if(msg.contains("/who")) {              // who
+                    else if(msg.contains("/who")) {              // who
                         bufferedWriter.write("[");
                         for (ClientHandler client : clients) {
                             bufferedWriter.write(client.clientName);
                             if(client != clients.get(clients.size()-1)) {
-                                bufferedWriter.write(",");
+                                bufferedWriter.write(", ");
                             }
                         }
                         bufferedWriter.write("]");
                         bufferedWriter.newLine();
                         bufferedWriter.flush();
                     }
-                    if(msg.contains("/quit")) {             // quit
+                    else if(msg.contains("/quit")) {             // quit
                         close(socket, bufferedReader, bufferedWriter);
                     } 
                     else {                                    // broadcast

@@ -1,10 +1,17 @@
 // CLIENT
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -37,15 +44,12 @@ public class tcpccs {
 
             UserInput ui = new UserInput();
             MessageListener ml = new MessageListener();
-            //FileTransfer ft = new FileTransfer();
 
             Thread userInputThread = new Thread(ui);
             Thread messageListenerThread = new Thread(ml);
-            //Thread fileTransferThread = new Thread(ft)
 
             userInputThread.start();
             messageListenerThread.start();
-            //fileTransferThread.start();
             
         } catch(IOException e) {
             close(socket, bufferedReader, bufferedWriter);
@@ -77,7 +81,13 @@ public class tcpccs {
             while(socket.isConnected()) {
                 try {
                     msg = bufferedReader.readLine();
-                    System.out.println(msg);
+                    if(msg.contains("[adr]")) { // start file transfer thread
+                        FileTransfer ft = new FileTransfer(msg);
+                        Thread fileTransferThread = new Thread(ft);
+                        fileTransferThread.start();
+                    } else {
+                        System.out.println(msg);
+                    }
                 } catch(IOException e) {
                     close(socket, bufferedReader, bufferedWriter);
                 }
@@ -87,7 +97,6 @@ public class tcpccs {
     }
 
     public static class UserInput implements Runnable {
-
         @Override
         public void run() {
            try {
@@ -97,9 +106,20 @@ public class tcpccs {
                     if(msg.contains("/quit")) {
                         close(socket, bufferedReader, bufferedWriter);
                     }
-                    bufferedWriter.write("[" + username + "] " + msg);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
+                    else if(msg.contains("/sendfile")) {
+                        String[] splitStr = msg.split("\\s+");
+                        File file = new File(splitStr[2]);
+
+                        System.out.println("[" + username + "] " + splitStr[0] + " " + splitStr[1] + " " + splitStr[2] + " " + file.length() + "B");
+                        
+                        bufferedWriter.write("[" + username + "] " + splitStr[0] + " " + splitStr[1] + " " + splitStr[2] + " " + file.length() + "B");
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+                    } else {
+                        bufferedWriter.write("[" + username + "] " + msg);
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+                    }
                 }
             } catch(IOException e) {
                 close(socket, bufferedReader, bufferedWriter);
@@ -109,9 +129,19 @@ public class tcpccs {
     }
 
     public static class FileTransfer implements Runnable {
+        public static boolean running;
+        private ServerSocket serverSocket;
+        private Socket clientSocket;
+        private int targetPort;
+
+        public FileTransfer(String inputPacket) {
+            String[] inputStr = inputPacket.split(",");
+            targetPort = Integer.valueOf(inputStr[2]);
+        }
 
         @Override
         public void run() {
+            running = true;
 
         }
         
