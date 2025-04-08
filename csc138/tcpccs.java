@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -108,8 +109,6 @@ public class tcpccs {
                     else if(msg.contains("/sendfile")) {
                         String[] splitStr = msg.split("\\s+");
                         file = new File(splitStr[2]);
-
-                        System.out.println("[" + username + "] " + splitStr[0] + " " + splitStr[1] + " " + splitStr[2] + " " + file.length() + "B");
                         
                         bufferedWriter.write("[" + username + "] " + splitStr[0] + " " + splitStr[1] + " " + splitStr[2] + " " + file.length() + "B");
                         bufferedWriter.newLine();
@@ -136,30 +135,27 @@ public class tcpccs {
 
         private String serverIP;
         private int port; 
+
+        private String filename;
         
 
         public FileTransfer(String inputPacket) {
+            System.out.println(inputPacket);
             String[] inputStrings = inputPacket.split(",");
             serverIP = inputStrings[1];
             port = Integer.valueOf(inputStrings[2]);
             if(inputStrings[3].contains("[snd]")) {
-                isSender = true;
-            } else {
                 isSender = false;
+            } else {
+                isSender = true;
             }
+            //filename = inputStrings[4];
 
         }
 
         @Override
         public void run() {
-            running = true;
-            if(!isSender) {
-                System.out.println("Reciever");
-            } else {
-                System.out.println("Sender");
-            }
-    
-            /* 
+            running = true; 
             try {
                 if(!isSender) {
                     
@@ -167,7 +163,7 @@ public class tcpccs {
                     clientSocket = serverSocket.accept();
 
                     InputStream inputStream = clientSocket.getInputStream();
-                    FileOutputStream fileOutputStream = new FileOutputStream("recieved_file.txt");
+                    FileOutputStream fileOutputStream = new FileOutputStream("test.txt");
 
                     byte[] buffer = new byte[1024];
                     int bytesRead;
@@ -175,17 +171,30 @@ public class tcpccs {
                         fileOutputStream.write(buffer,0,bytesRead);
                     }
                     
-
-                    
+                    fileOutputStream.close();
+                    inputStream.close();
+                    clientSocket.close();
+                    serverSocket.close();
                 } else {
                     
                     clientSocket = new Socket(serverIP, port);
-                    
+                    FileInputStream fileInputStream = new FileInputStream(file);
+                    OutputStream outputStream = clientSocket.getOutputStream();
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+
+                    while((bytesRead = fileInputStream.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+
+                    outputStream.close();
+                    fileInputStream.close();
+                    clientSocket.close();
                 }
             } catch (IOException e) {
-                
+                close(clientSocket, bufferedReader, bufferedWriter);
             }
-            */
 
         }
         
