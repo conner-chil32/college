@@ -112,14 +112,14 @@ public class tcpcss {
                         int FTPPort = 19285;
 
                         for (ClientHandler client : clients) {
-                            if(client.clientName.contains(targetUser)) { // reciever
+                            if(client.clientName.contains(targetUser)) { // sender
 
                                 client.bufferedWriter.write(fileTransferAccept);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                                 
                                 // [adr] is the signal key that tells the client this is new socket info
-                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[rec]," + filename);
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[snd]," + filename);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
 
@@ -127,13 +127,13 @@ public class tcpcss {
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                             }
-                            if(client.clientName == clientName) { // sender
+                            if(client.clientName == clientName) { // rec
 
                                 client.bufferedWriter.write(fileTransferAccept);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
 
-                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[snd]," + filename);
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[rec]," + filename);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                                 

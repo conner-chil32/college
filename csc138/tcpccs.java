@@ -142,12 +142,12 @@ public class tcpccs {
         public FileTransfer(String inputPacket) {
             System.out.println(inputPacket);
             String[] inputStrings = inputPacket.split(",");
-            serverIP = inputStrings[1];
+            serverIP = inputStrings[1].replace("/", "");
             port = Integer.valueOf(inputStrings[2]);
             if(inputStrings[3].contains("[snd]")) {
-                isSender = false;
-            } else {
                 isSender = true;
+            } else {
+                isSender = false;
             }
             //filename = inputStrings[4];
 
