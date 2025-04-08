@@ -130,7 +130,6 @@ public class tcpccs {
 
     public static class FileTransfer implements Runnable {
         public static boolean running;
-        private ServerSocket serverSocket;
         private Socket clientSocket;
         private boolean isSender;
 
@@ -158,9 +157,7 @@ public class tcpccs {
             running = true; 
             if(isSender) {
                 try (ServerSocket serverSocket = new ServerSocket(port)) {
-                    System.out.println("Server started, waiting for client...");
-                    Socket clientSocket = serverSocket.accept();
-                    System.out.println("Client connected: " + clientSocket);
+                    clientSocket = serverSocket.accept();
 
                     FileInputStream fileInputStream = new FileInputStream(file);
                     BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
@@ -173,7 +170,9 @@ public class tcpccs {
                     }
                     outputStream.flush();
 
-                    System.out.println("File sent successfully!");
+                    bufferedWriter.write("[File transfered succesfully]");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
 
                     bufferedInputStream.close();
                     outputStream.close();
@@ -184,7 +183,6 @@ public class tcpccs {
                 }
             } else {
                 try (Socket socket = new Socket(serverIP, port)) {
-                    System.out.println("Connected to server: " + serverIP + ":" + port);
 
                     InputStream inputStream = socket.getInputStream();
                     BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("test.txt"));
@@ -196,7 +194,9 @@ public class tcpccs {
                     }
                     bufferedOutputStream.flush();
 
-                    System.out.println("File received successfully!");
+                    bufferedWriter.write("[File transfered succesfully]");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
 
                     bufferedOutputStream.close();
                     inputStream.close();
