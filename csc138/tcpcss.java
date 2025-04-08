@@ -108,25 +108,27 @@ public class tcpcss {
                         String fileTransferAccept = new String("[File transfer accepted from " + targetUser + " to " + clientName + "]");
                         System.out.println(fileTransferAccept);
 
+                        int FTPPort = 19285;
+
                         for (ClientHandler client : clients) {
-                            if(client.clientName.contains(targetUser)) {
+                            if(client.clientName.contains(targetUser)) { // reciever
 
                                 client.bufferedWriter.write(fileTransferAccept);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                                 
                                 // [adr] is the signal key that tells the client this is new socket info
-                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + Math.random() + ",rec");
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[rec]");
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                             }
-                            if(client.clientName == clientName) {
+                            if(client.clientName == clientName) { // sender
 
                                 client.bufferedWriter.write(fileTransferAccept);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
 
-                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + Math.random() + ",snd");
+                                client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[snd]");
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                             }

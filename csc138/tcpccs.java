@@ -1,14 +1,12 @@
 // CLIENT
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
@@ -23,6 +21,7 @@ public class tcpccs {
     private static BufferedReader bufferedReader;
     private static BufferedWriter bufferedWriter;
     private static String username;
+    private static File file;
     
     public static void main(String[] args) {
         if(args.length <= 0) {
@@ -108,7 +107,7 @@ public class tcpccs {
                     }
                     else if(msg.contains("/sendfile")) {
                         String[] splitStr = msg.split("\\s+");
-                        File file = new File(splitStr[2]);
+                        file = new File(splitStr[2]);
 
                         System.out.println("[" + username + "] " + splitStr[0] + " " + splitStr[1] + " " + splitStr[2] + " " + file.length() + "B");
                         
@@ -130,18 +129,63 @@ public class tcpccs {
 
     public static class FileTransfer implements Runnable {
         public static boolean running;
+        private FileInputStream fileInputStream;
         private ServerSocket serverSocket;
         private Socket clientSocket;
-        private int targetPort;
+        private boolean isSender;
+
+        private String serverIP;
+        private int port; 
+        
 
         public FileTransfer(String inputPacket) {
-            String[] inputStr = inputPacket.split(",");
-            targetPort = Integer.valueOf(inputStr[2]);
+            String[] inputStrings = inputPacket.split(",");
+            serverIP = inputStrings[1];
+            port = Integer.valueOf(inputStrings[2]);
+            if(inputStrings[3].contains("[snd]")) {
+                isSender = true;
+            } else {
+                isSender = false;
+            }
+
         }
 
         @Override
         public void run() {
             running = true;
+            if(!isSender) {
+                System.out.println("Reciever");
+            } else {
+                System.out.println("Sender");
+            }
+    
+            /* 
+            try {
+                if(!isSender) {
+                    
+                    serverSocket = new ServerSocket(port);
+                    clientSocket = serverSocket.accept();
+
+                    InputStream inputStream = clientSocket.getInputStream();
+                    FileOutputStream fileOutputStream = new FileOutputStream("recieved_file.txt");
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while((bytesRead = inputStream.read(buffer)) != -1) {
+                        fileOutputStream.write(buffer,0,bytesRead);
+                    }
+                    
+
+                    
+                } else {
+                    
+                    clientSocket = new Socket(serverIP, port);
+                    
+                }
+            } catch (IOException e) {
+                
+            }
+            */
 
         }
         
