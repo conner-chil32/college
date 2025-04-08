@@ -181,7 +181,7 @@ public class tcpccs {
                     bufferedWriter.newLine();
                     bufferedWriter.flush();
                 } else {
-                    
+                    Thread.sleep(1000);
                     clientSocket = new Socket(serverIP, port);
                     System.out.println("Connected!");
                     FileInputStream fileInputStream = new FileInputStream(file);
@@ -202,7 +202,7 @@ public class tcpccs {
                     bufferedWriter.newLine();
                     bufferedWriter.flush();
                 }
-            } catch (IOException e) {
+            } catch (IOException | InterruptedException e) {
                 close(clientSocket, bufferedReader, bufferedWriter);
             }
 
