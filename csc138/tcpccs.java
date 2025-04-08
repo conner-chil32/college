@@ -160,7 +160,9 @@ public class tcpccs {
             try {
                 if(!isSender) {
                     serverSocket = new ServerSocket(port);
+                    System.out.println("Waiting for connection");
                     clientSocket = serverSocket.accept();
+                    System.out.println("Connected!");
 
                     InputStream inputStream = clientSocket.getInputStream();
                     FileOutputStream fileOutputStream = new FileOutputStream("test.txt");
@@ -182,6 +184,7 @@ public class tcpccs {
                 } else {
                     
                     clientSocket = new Socket(serverIP, port);
+                    System.out.println("Connected!");
                     FileInputStream fileInputStream = new FileInputStream(file);
                     OutputStream outputStream = clientSocket.getOutputStream();
 
