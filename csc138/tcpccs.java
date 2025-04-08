@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.NumberFormat.Style;
 import java.util.Scanner;
 
 // Written By: Conner Childers, 4/5/2025
@@ -158,7 +159,6 @@ public class tcpccs {
             running = true; 
             try {
                 if(!isSender) {
-                    
                     serverSocket = new ServerSocket(port);
                     clientSocket = serverSocket.accept();
 
@@ -175,6 +175,10 @@ public class tcpccs {
                     inputStream.close();
                     clientSocket.close();
                     serverSocket.close();
+
+                    bufferedWriter.write("[File Transfer Complete]");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
                 } else {
                     
                     clientSocket = new Socket(serverIP, port);
@@ -191,6 +195,10 @@ public class tcpccs {
                     outputStream.close();
                     fileInputStream.close();
                     clientSocket.close();
+
+                    bufferedWriter.write("[File Transfer Complete]");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
                 }
             } catch (IOException e) {
                 close(clientSocket, bufferedReader, bufferedWriter);

@@ -122,6 +122,10 @@ public class tcpcss {
                                 client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[rec]," + filename);
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
+
+                                client.bufferedWriter.write("[Starting file transfer between " + clientName + " and " + targetUser + "]");
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
                             }
                             if(client.clientName == clientName) { // sender
 
@@ -130,6 +134,10 @@ public class tcpcss {
                                 client.bufferedWriter.flush();
 
                                 client.bufferedWriter.write("[adr]," + client.socket.getInetAddress() + "," + FTPPort + ",[snd]," + filename);
+                                client.bufferedWriter.newLine();
+                                client.bufferedWriter.flush();
+                                
+                                client.bufferedWriter.write("[Starting file transfer between " + clientName + " and " + targetUser + "]");
                                 client.bufferedWriter.newLine();
                                 client.bufferedWriter.flush();
                             }
