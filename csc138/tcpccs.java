@@ -1,5 +1,7 @@
 // CLIENT
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -128,7 +130,6 @@ public class tcpccs {
 
     public static class FileTransfer implements Runnable {
         public static boolean running;
-        private FileInputStream fileInputStream;
         private ServerSocket serverSocket;
         private Socket clientSocket;
         private boolean isSender;
@@ -136,7 +137,6 @@ public class tcpccs {
         private String serverIP;
         private int port; 
 
-        private String filename;
         
 
         public FileTransfer(String inputPacket) {
@@ -156,56 +156,54 @@ public class tcpccs {
         @Override
         public void run() {
             running = true; 
-            try {
-                if(!isSender) {
-                    serverSocket = new ServerSocket(port);
-                    System.out.println("Waiting for connection");
-                    clientSocket = serverSocket.accept();
-                    System.out.println("Connected!");
+            if(isSender) {
+                try (ServerSocket serverSocket = new ServerSocket(port)) {
+                    System.out.println("Server started, waiting for client...");
+                    Socket clientSocket = serverSocket.accept();
+                    System.out.println("Client connected: " + clientSocket);
 
-                    InputStream inputStream = clientSocket.getInputStream();
-                    FileOutputStream fileOutputStream = new FileOutputStream("test.txt");
-
-                    byte[] buffer = new byte[1024];
-                    int bytesRead;
-                    while((bytesRead = inputStream.read(buffer)) > 0) {
-                        fileOutputStream.write(buffer,0,bytesRead);
-                    }
-                    
-                    fileOutputStream.close();
-                    inputStream.close();
-                    clientSocket.close();
-                    serverSocket.close();
-
-                    bufferedWriter.write("[File Transfer Complete]");
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                } else {
-                    Thread.sleep(1000);
-                    clientSocket = new Socket(serverIP, port);
-                    System.out.println("Connected!");
                     FileInputStream fileInputStream = new FileInputStream(file);
+                    BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
                     OutputStream outputStream = clientSocket.getOutputStream();
 
                     byte[] buffer = new byte[1024];
                     int bytesRead;
-
-                    while((bytesRead = fileInputStream.read(buffer)) > 0) {
+                    while ((bytesRead = bufferedInputStream.read(buffer)) != -1) {
                         outputStream.write(buffer, 0, bytesRead);
                     }
+                    outputStream.flush();
 
+                    System.out.println("File sent successfully!");
+
+                    bufferedInputStream.close();
                     outputStream.close();
-                    fileInputStream.close();
                     clientSocket.close();
 
-                    bufferedWriter.write("[File Transfer Complete]");
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException | InterruptedException e) {
-                close(clientSocket, bufferedReader, bufferedWriter);
-            }
+            } else {
+                try (Socket socket = new Socket(serverIP, port)) {
+                    System.out.println("Connected to server: " + serverIP + ":" + port);
 
+                    InputStream inputStream = socket.getInputStream();
+                    BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("test.txt"));
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) != -1) {
+                        bufferedOutputStream.write(buffer, 0, bytesRead);
+                    }
+                    bufferedOutputStream.flush();
+
+                    System.out.println("File received successfully!");
+
+                    bufferedOutputStream.close();
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         
     }
