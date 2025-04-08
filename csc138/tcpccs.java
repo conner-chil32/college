@@ -168,7 +168,7 @@ public class tcpccs {
 
                     byte[] buffer = new byte[1024];
                     int bytesRead;
-                    while((bytesRead = inputStream.read(buffer)) != -1) {
+                    while((bytesRead = inputStream.read(buffer)) > 0) {
                         fileOutputStream.write(buffer,0,bytesRead);
                     }
                     
@@ -190,7 +190,7 @@ public class tcpccs {
                     byte[] buffer = new byte[1024];
                     int bytesRead;
 
-                    while((bytesRead = fileInputStream.read(buffer)) != -1) {
+                    while((bytesRead = fileInputStream.read(buffer)) > 0) {
                         outputStream.write(buffer, 0, bytesRead);
                     }
 
