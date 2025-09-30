@@ -10,37 +10,54 @@ struct input {
     char* flag_type;
 };
 
+static char* parse_delimiter(char* arg, char* delimiter) {
+    char* value = strchr(arg, '=');
+
+    return value;
+}
+
 static void parse_inputs(struct input* args, int argc, char* argv[]) {
     // setting default values
+    args[0].flag = 0;
     args[0].flag_type = "seed";
     args[0].value = "0";
 
+    args[1].flag = 0;
     args[1].flag_type = "job count";
     args[1].value = "3";
 
+    args[2].flag = 0;
     args[2].flag_type = "jobs list";
     args[2].value = "";
     
+    args[3].flag = 0;
     args[3].flag_type = "max length";
     args[3].value = "10";
 
+    args[4].flag = 0;
     args[4].flag_type = "policy flag";
     args[4].value = "FIFO";
 
+    args[5].flag = 0;
     args[5].flag_type = "quantum";
     args[5].value = "1";
 
+    args[6].flag = 0;
     args[6].flag_type = "compute";
     args[6].value = "false";
 
+    args[7].flag = 0;
     args[7].flag_type = "help";
     args[7].value = "false";
 
     for (int i = 1; i < argc; i++) {
 
-        if(strcmp(argv[i], "-s") == 0 || strcmp(argv[i], "--seed") == 0) {      // seed
+        if(strcmp(argv[i], "-s") == 0) {      // seed
             args[0].flag = 1;
             args[0].value = argv[i+1];      // <int> seed value
+        } else if(strstr(argv[i], "--seed=") != NULL) {
+            args[0].flag = 1;
+            args[0].value = parse_delimiter(argv[i], "=");
         }
         
         if(strcmp(argv[i], "-j") == 0 || strcmp(argv[i], "--jobs") == 0) {      // jobs
@@ -83,9 +100,6 @@ static void parse_inputs(struct input* args, int argc, char* argv[]) {
 int main(int argc, char* argv[]) {
 
     struct input arguments[8];
-    for(int i=0; i<8; i++) {
-        arguments->flag = 0;
-    }
     
     parse_inputs(arguments, argc, argv);
 
