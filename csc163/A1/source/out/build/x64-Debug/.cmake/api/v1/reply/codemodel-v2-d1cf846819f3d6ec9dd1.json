@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.9"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "a1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BasicMatrixMultiplication_Template::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BasicMatrixMultiplication_Template-Release-7699d329ceda99653a94.json",
+					"name" : "BasicMatrixMultiplication_Template",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TiledMatrixMultiplication_Template::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TiledMatrixMultiplication_Template-Release-9ca7a66cf4f47bf9d70b.json",
+					"name" : "TiledMatrixMultiplication_Template",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VectorAdd_Template::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VectorAdd_Template-Release-5acb3951a2c2a82dc0fc.json",
+					"name" : "VectorAdd_Template",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wb-Release-3685882d994ab3c670bb.json",
+					"name" : "wb",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Conner/Documents/Github/college/csc163/A1/source/out/build/x64-Debug",
+		"source" : "C:/Users/Conner/Documents/Github/college/csc163/A1/source"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}
