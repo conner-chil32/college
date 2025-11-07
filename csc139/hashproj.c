@@ -18,7 +18,6 @@ unsigned long process_block(const unsigned char *buf, size_t len);
 int run_single(const char *filename);
 int run_multi(const char *filename);
 
-
 /* =======================================================================
    PROVIDED CODE — DO NOT MODIFY
    -----------------------------------------------------------------------
@@ -225,13 +224,149 @@ int main(int argc, char *argv[]) {
    init_umem().
    ======================================================================= */
 
+static void     *umem_base = NULL;      // Base of managed memory region
+static node_t   *free_list = NULL;      // Head of the free list
+static node_t   *free_cursor = NULL;    // Current position in free list for next-fit
+
 void *umalloc(size_t size) {
-    return malloc(size);
+    if(size == 0) return NULL;
+    
+    if (!umem_base) {   // Makes it so we only initialize once
+        umem_base = init_umem();
+        if (!umem_base) return NULL;
+
+        free_list = (node_t *)umem_base;        
+        free_list->size = UMEM_SIZE;            
+        free_list->next = NULL;
+        free_cursor = free_list;
+    }
+
+    if (!umem_base || !free_list) return NULL;
+
+    size_t rounded_size = (size + 7) & ~7; // Align size to 8 bytes
+    size_t total_size = rounded_size + sizeof(header_t);
+
+    node_t *start = free_cursor ?  free_cursor : free_list; // Start from cursor or head
+    node_t *current = start;
+    node_t *prev = NULL;
+
+    int wrapped_around = 0;
+
+    while(current) {
+        if((size_t)current->size >= total_size) { // Found a suitable block
+            char *alloc_ptr = (char *)current; // Pointer to the start of the free block
+            header_t *header = (header_t *)alloc_ptr; // Header will be placed at the start
+
+            size_t remaining_size = current->size - total_size; // Size left after allocation
+
+            if(remaining_size >= sizeof(node_t) + 8) {
+                node_t *new_free = (node_t *)(alloc_ptr + total_size);
+                new_free->size = (long)remaining_size;
+                new_free->next = current->next;
+
+                if(prev) { // Link previous block to new free block
+                    prev->next = new_free;
+                } else { // Update head if allocating from the first block
+                    free_list = new_free;
+                }
+                free_cursor = new_free;
+            } else { // Not enough space to split, allocate entire block
+                if(prev) { // Link previous block to next
+                    prev->next = current->next;
+                    free_cursor = prev->next;
+                } else { // Update head if allocating from the first block
+                    free_list = current->next;
+                    free_cursor = free_list;
+                }
+            }
+
+            header->size = (long)rounded_size; // Store requested size
+            header->magic = MAGIC; // Set magic number for integrity check
+            return (void *)(header + 1); // Return pointer to payload
+        }
+
+        prev = current;
+        current = current->next;
+
+        if(!current && wrapped_around != 1) { // Wrap around to start
+            current = free_list;
+            prev = NULL;
+            wrapped_around = 1;
+        } else if(!current) {
+            break; // Full traversal done
+        }
+
+        if(wrapped_around && current == start) { // Back to start after wrap
+            break; // Full traversal done
+        }
+    }
+    return NULL; // No suitable block found
 }
 
 void ufree(void *ptr) {
-    free(ptr);
-}
+    if(!ptr) return;
+
+    header_t *header = (header_t *)ptr - 1; // Get header from payload pointer
+    
+    if((long long)header->magic != MAGIC) { // Check magic number
+        fprintf(stderr, "umalloc: invalid pointer passed to ufree\n");
+        return;
+    }
+
+    header->magic = 0; // Invalidate magic number
+
+    node_t *block = (node_t *)header; // Convert header to free block
+    block->size = header->size + sizeof(header_t); // Total size of the block
+    block->next = NULL; // Initialize next pointer
+
+    if(!free_list) { // If free list is empty
+        free_list = block;
+        free_cursor = block;
+        return;
+    }
+
+    node_t *current = free_list;
+    node_t *prev = NULL;
+    char *block_adder = (char *)block; // Pointer to the start of the block being freed
+
+    while(current && (char *)current < block_adder) { // Find insertion point
+        prev = current;
+        current = current->next;
+    }
+
+    if(prev == NULL) { // Insert at head
+        block->next = free_list;
+        free_list = block;
+    } else { // Insert in between or at end
+        prev->next = block;
+        block->next = current;
+    }
+
+    // Coalesce with next block if adjacent
+    if(prev) {
+        char *prev_end = (char *)prev + prev->size;
+        if(prev_end == (char *)block) {
+            prev->size += block->size;
+            prev->next = block->next;
+            block = prev; // Update block to the coalesced block
+        }
+    }
+
+    // Coalesce with previous block if adjacent
+    node_t *next_block = block->next;
+    if(next_block) {
+        char *block_end = (char *)block + block->size;
+        if(block_end == (char *)next_block) {
+            block->size += next_block->size;
+            block->next = next_block->next;
+        }
+    }
+
+    // Update free_cursor to the freed block
+     if (!free_cursor || free_cursor == prev || free_cursor == block || free_cursor == next_block) {
+        free_cursor = block;
+    }
+}   
 
 
 unsigned long process_block(const unsigned char *buf, size_t len) {
@@ -252,21 +387,25 @@ unsigned long process_block(const unsigned char *buf, size_t len) {
     /* Step 2: Count symbol frequencies in this block. */
     for (size_t i = 0; i < len; i++) {
         /* TODO: Increment frequency for symbol buf[i] */
+        freq[buf[i]]++;
     }
 
     /* Step 3: Build Huffman tree using provided build_tree() function.
        Pass in the frequency array you just filled. */
     Node *root = NULL;  /* TODO: call build_tree(freq) */
+    root = build_tree(freq);
 
     /* Step 4: Compute hash of the tree using provided hash_tree().
        Start with an initial hash value of 0. */
     unsigned long h = 0;  /* TODO: call hash_tree(root, 0) */
+    h = hash_tree(root, 0);
 
     /* Step 5: Free the Huffman tree to avoid memory leaks. */
     /* TODO: call free_tree(root) */
+    free_tree(root);
 
     /* Step 6: Return the computed hash value for this block. */
-    return 0;  /* Replace with your hash variable */
+    return h;  /* Replace with your hash variable */
 }
 
 /* -------------------------------------------------------------------
@@ -286,6 +425,27 @@ unsigned long process_block(const unsigned char *buf, size_t len) {
      5. Handle any file errors (e.g., fopen failure).
 ------------------------------------------------------------------- */
 int run_single(const char *filename) {
+    FILE *file = fopen(filename, "rb");
+
+    if (!file) {
+        perror("fopen");
+        return 1;
+    } else {
+        unsigned char local_buffer[BLOCK_SIZE];
+        size_t bytes_read;
+        unsigned long final_hash = 0;
+        int block_num = 0;
+
+        while ((bytes_read = fread(local_buffer, 1, BLOCK_SIZE, file)) > 0) {
+            unsigned long hash = process_block(local_buffer, bytes_read);
+            print_intermediate(block_num, hash, getpid());
+            final_hash = (final_hash + hash) % LARGE_PRIME;
+            block_num++;
+        }
+
+        fclose(file);
+        print_final(final_hash);
+    }
 
     return 0;
 }
@@ -319,6 +479,67 @@ int run_single(const char *filename) {
 ------------------------------------------------------------------- */
 
 int run_multi(const char *filename) {
+    FILE *file = fopen(filename, "rb");
+
+    if (!file) {
+        perror("fopen");
+        return 1;
+    } else {
+        unsigned char local_buffer[BLOCK_SIZE];
+        size_t bytes_read;
+        unsigned long final_hash = 0;
+        int block_num = 0;
+        pid_t *child_pids = NULL;
+        size_t child_count = 0;
+
+        while ((bytes_read = fread(local_buffer, 1, BLOCK_SIZE, file)) > 0) {
+            int pipefd[2];
+            if (pipe(pipefd) == -1) {
+                perror("pipe");
+                fclose(file);
+                return 1;
+            }
+
+            pid_t pid = fork();
+            if (pid < 0) {
+                perror("fork");
+                close(pipefd[0]);
+                close(pipefd[1]);
+                fclose(file);
+                return 1;
+            } else if (pid == 0) { // Child process
+                close(pipefd[0]); // Close read end
+                unsigned long hash = process_block(local_buffer, bytes_read);
+                write(pipefd[1], &hash, sizeof(hash));
+                close(pipefd[1]); // Close write end
+                _exit(0);
+            } else { // Parent process
+                close(pipefd[1]); // Close write end
+                unsigned long hash;
+                read(pipefd[0], &hash, sizeof(hash));
+                close(pipefd[0]); // Close read end
+
+                print_intermediate(block_num, hash, pid);
+                final_hash = (final_hash + hash) % LARGE_PRIME;
+
+                // Store child PID for later waiting
+                child_pids = realloc(child_pids, sizeof(pid_t) * (child_count + 1));
+                child_pids[child_count++] = pid;
+
+                block_num++;
+            }
+        }
+
+        // Wait for all child processes to finish
+        for (size_t i = 0; i < child_count; i++) {
+            waitpid(child_pids[i], NULL, 0);
+        }
+        free(child_pids);
+
+        fclose(file);
+        print_final(final_hash);
+    }
+
     return 0;
 }
 
