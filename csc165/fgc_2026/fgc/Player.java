@@ -49,7 +49,7 @@ public class Player implements IPlayer{
     @Override
     public void update(float elapsTime) {
         inputHandler.processInputMap(elapsTime);
-        inputHandler.processActionQueue(elapsTime);
+        //inputHandler.processActionQueue(elapsTime);
         inputHandler.printLatest();
 
         inputHandler.resetInputMap();
