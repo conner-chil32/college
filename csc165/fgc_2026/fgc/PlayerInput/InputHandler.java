@@ -49,7 +49,6 @@ public class InputHandler {
 
     public void processInputMap(float elapsTime) {
         BASIC_ACTION_COMMANDS command = null;
-        BASIC_ACTION_COMMANDS command2 = null;
         for (Map.Entry<String, Boolean> entry : inputMap.entrySet()) {
             if(entry.getValue() == true) {
                 command = BASIC_ACTION_COMMANDS.valueOf(entry.getKey());
