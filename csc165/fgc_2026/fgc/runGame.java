@@ -1,5 +1,7 @@
 package fgc;
 
+import fgc.Scene.SceneElement;
+import fgc.Scene.SceneManager;
 import tage.*;
 import tage.input.InputManager;
 import tage.shapes.*;
@@ -17,12 +19,15 @@ public class runGame extends VariableFrameRateGame
 	private boolean paused=false;
 	private double lastFrameTime, currFrameTime, elapsTime;
 	private InputManager im;
-	private Player player1;
+
+	public static boolean debug = true;
+
+	private SceneManager sm = new SceneManager();
 
 //	private GameObject dol;
 //	private ObjShape dolS;
 //	private TextureImage doltx;
-//	private Light light1;
+	private Light light1;
 
 	public runGame() { super(); }
 
@@ -38,12 +43,14 @@ public class runGame extends VariableFrameRateGame
 	public void loadShapes()
 	{
 //		dolS = new ImportedModel("dolphinHighPoly.obj");
+		sm.loadObjShapes();
 	}
 
 	@Override
 	public void loadTextures()
 	{
 		// doltx = new TextureImage("Dolphin_HighPolyUV.jpg");
+		sm.loadTextures();
 	}
 
 	@Override
@@ -57,25 +64,23 @@ public class runGame extends VariableFrameRateGame
 //		initialScale = (new Matrix4f()).scaling(3.0f);
 //		dol.setLocalTranslation(initialTranslation);
 //		dol.setLocalScale(initialScale);
-
+		sm.loadObjects();
 	}
 
 	@Override
 	public void initializeLights()
 	{
-//		Light.setGlobalAmbient(0.5f, 0.5f, 0.5f);
-//		light1 = new Light();
-//		light1.setLocation(new Vector3f(5.0f, 4.0f, 2.0f));
-//		(engine.getSceneGraph()).addLight(light1);
+		Light.setGlobalAmbient(0.5f, 0.5f, 0.5f);
+		light1 = new Light();
+		light1.setLocation(new Vector3f(5.0f, 4.0f, 2.0f));
+		(engine.getSceneGraph()).addLight(light1);
 	}
 
 	@Override
 	public void initializeGame()
 	{
 		im = engine.getInputManager();
-		player1 = new Player(im, engine.getHUDmanager());
-
-		player1.initializeControls();
+		sm.changeScene(sm.scenes.get(0));
 
 		lastFrameTime = System.currentTimeMillis();
 		currFrameTime = System.currentTimeMillis();
@@ -95,7 +100,6 @@ public class runGame extends VariableFrameRateGame
 		if (!paused) elapsTime += (currFrameTime - lastFrameTime) / 1000.0;
 
 		im.update((float) elapsTime);
-		player1.update((float) elapsTime);
 
 
 
@@ -115,8 +119,23 @@ public class runGame extends VariableFrameRateGame
 	}
 
 	@Override
+	public void keyPressed(KeyEvent e) {
+		super.keyPressed(e);
+		if(e.getKeyCode() == KeyEvent.VK_A) {
+			for(SceneElement sc: SceneManager.currentScene.sceneElements) {
+				sc.object.setLocalRotation(new Matrix4f().rotation(-(float) elapsTime, 0f,1f,0f));
+			}
+		}
+		if(e.getKeyCode() == KeyEvent.VK_W) {
+			sm.changeScene(sm.scenes.get(1));
+		}
+		if(e.getKeyCode() == KeyEvent.VK_S) {
+			sm.changeScene(sm.scenes.get(0));
+		}
+	}
+
+	@Override
 	public void shutdown() {
-		player1.getInputHandler().printActionQueue();
 		super.shutdown();
 	}
 }
